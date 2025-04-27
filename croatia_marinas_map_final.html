@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b2c63cee667946b7840f7f27136efe83 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+    <script src="https://unpkg.com/leaflet.featuregroup.subgroup@1.0.2/dist/leaflet.featuregroup.subgroup.js"></script>
+</head>
+<body>
+    
+    
+<h3 align="center" style="font-size:20px"><b>Buoys, Beaches, and Booze</b></h3>
+    
+            <div class="folium-map" id="map_b2c63cee667946b7840f7f27136efe83" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b2c63cee667946b7840f7f27136efe83 = L.map(
+                "map_b2c63cee667946b7840f7f27136efe83",
+                {
+                    center: [43.9, 16.1],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0a16394040cd45de2413abcd47ae4aaf = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0a16394040cd45de2413abcd47ae4aaf.addTo(map_b2c63cee667946b7840f7f27136efe83);
+        
+    
+            var marker_cluster_15e9fbe1ab2211d7725bb485bfb48784 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            marker_cluster_15e9fbe1ab2211d7725bb485bfb48784.addTo(map_b2c63cee667946b7840f7f27136efe83);
+        
+    
+            var feature_group_sub_group_28e6d5d82f2b5ef69a386ab15e6d4f5d = L.featureGroup.subGroup(
+                marker_cluster_15e9fbe1ab2211d7725bb485bfb48784
+            );
+        
+    
+            var marker_7eb17cdb69033b15b14cde5414a00835 = L.marker(
+                [43.8164863, 15.6635606],
+                {
+}
+            ).addTo(feature_group_sub_group_28e6d5d82f2b5ef69a386ab15e6d4f5d);
+        
+    
+            var icon_83dfeb05d9403669ec60a83d41a6767f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "anchor",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_391c82e4a7909ff9a7a17c3f96cc32cc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8870d027607b0888ad8ae2dfff2ebcf4 = $(`<div id="html_8870d027607b0888ad8ae2dfff2ebcf4" style="width: 100.0%; height: 100.0%;"><b>Marina Pirovac</b><br>Price: 200€<br><a href='https://marinapirovac.com/en/home.html' target='_blank'>Visit Website</a></div>`)[0];
+                popup_391c82e4a7909ff9a7a17c3f96cc32cc.setContent(html_8870d027607b0888ad8ae2dfff2ebcf4);
+            
+        
+
+        marker_7eb17cdb69033b15b14cde5414a00835.bindPopup(popup_391c82e4a7909ff9a7a17c3f96cc32cc)
+        ;
+
+        
+    
+    
+                marker_7eb17cdb69033b15b14cde5414a00835.setIcon(icon_83dfeb05d9403669ec60a83d41a6767f);
+            
+    
+            var marker_cec9e31b0e1670c55a58bb07f9757935 = L.marker(
+                [43.8298294, 15.6128952],
+                {
+}
+            ).addTo(feature_group_sub_group_28e6d5d82f2b5ef69a386ab15e6d4f5d);
+        
+    
+            var icon_3a2f6b3fb6e674c0061169d0d7825eba = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "anchor",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_69e08fff04c4d860d54ffccf145c2bfd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8c35af53978e760029995485ccf79956 = $(`<div id="html_8c35af53978e760029995485ccf79956" style="width: 100.0%; height: 100.0%;"><b>Marina Betina</b><br>Price: 220€<br><a href='https://www.marina-betina.com/services' target='_blank'>Visit Website</a></div>`)[0];
+                popup_69e08fff04c4d860d54ffccf145c2bfd.setContent(html_8c35af53978e760029995485ccf79956);
+            
+        
+
+        marker_cec9e31b0e1670c55a58bb07f9757935.bindPopup(popup_69e08fff04c4d860d54ffccf145c2bfd)
+        ;
+
+        
+    
+    
+                marker_cec9e31b0e1670c55a58bb07f9757935.setIcon(icon_3a2f6b3fb6e674c0061169d0d7825eba);
+            
+    
+            var marker_ed3aa8b2a46f41fe1d2fd0b9e61bd897 = L.marker(
+                [43.0622958, 16.1844553],
+                {
+}
+            ).addTo(feature_group_sub_group_28e6d5d82f2b5ef69a386ab15e6d4f5d);
+        
+    
+            var icon_5fb6c40b583478a23de9924d2f02a8a6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "anchor",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_06f7cac32c884d3bb3088ba8ec0c0c68 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5eb8e3c67e0f01825a8e87b8bbd1d942 = $(`<div id="html_5eb8e3c67e0f01825a8e87b8bbd1d942" style="width: 100.0%; height: 100.0%;"><b>Vis Town Harbour</b><br>Price: 230€<br><a href='https://www.sail-croatia.com/resources/mooring-information/vis' target='_blank'>Visit Website</a></div>`)[0];
+                popup_06f7cac32c884d3bb3088ba8ec0c0c68.setContent(html_5eb8e3c67e0f01825a8e87b8bbd1d942);
+            
+        
+
+        marker_ed3aa8b2a46f41fe1d2fd0b9e61bd897.bindPopup(popup_06f7cac32c884d3bb3088ba8ec0c0c68)
+        ;
+
+        
+    
+    
+                marker_ed3aa8b2a46f41fe1d2fd0b9e61bd897.setIcon(icon_5fb6c40b583478a23de9924d2f02a8a6);
+            
+    
+            var marker_d934c3079302bdabe82c897642f928bc = L.marker(
+                [43.0441335, 16.0884032],
+                {
+}
+            ).addTo(feature_group_sub_group_28e6d5d82f2b5ef69a386ab15e6d4f5d);
+        
+    
+            var icon_1fbde7c57e6db619713a044372cfa273 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "anchor",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b7a62e31aa7a4ca46f364922acedd5a2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c11dc560efee6e946e186f9e3c21935a = $(`<div id="html_c11dc560efee6e946e186f9e3c21935a" style="width: 100.0%; height: 100.0%;"><b>Komiža Town Harbour</b><br>Price: 230€<br><a href='https://www.sail-croatia.com/resources/mooring-information/komiza' target='_blank'>Visit Website</a></div>`)[0];
+                popup_b7a62e31aa7a4ca46f364922acedd5a2.setContent(html_c11dc560efee6e946e186f9e3c21935a);
+            
+        
+
+        marker_d934c3079302bdabe82c897642f928bc.bindPopup(popup_b7a62e31aa7a4ca46f364922acedd5a2)
+        ;
+
+        
+    
+    
+                marker_d934c3079302bdabe82c897642f928bc.setIcon(icon_1fbde7c57e6db619713a044372cfa273);
+            
+    
+            var marker_23b90e5d1aca819c34d7f2fe0d4d4949 = L.marker(
+                [43.532695, 16.2640966],
+                {
+}
+            ).addTo(feature_group_sub_group_28e6d5d82f2b5ef69a386ab15e6d4f5d);
+        
+    
+            var icon_bacc6e97f75db444ee8b7c489f6c0c17 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "anchor",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d02ac25a3d1edc583f16d05cd3be04e9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e9b08517eab66358d30515e3a0f28d01 = $(`<div id="html_e9b08517eab66358d30515e3a0f28d01" style="width: 100.0%; height: 100.0%;"><b>Marina Baotić</b><br>Price: 193.5€<br><a href='https://www.marinabaotic.com/en' target='_blank'>Visit Website</a></div>`)[0];
+                popup_d02ac25a3d1edc583f16d05cd3be04e9.setContent(html_e9b08517eab66358d30515e3a0f28d01);
+            
+        
+
+        marker_23b90e5d1aca819c34d7f2fe0d4d4949.bindPopup(popup_d02ac25a3d1edc583f16d05cd3be04e9)
+        ;
+
+        
+    
+    
+                marker_23b90e5d1aca819c34d7f2fe0d4d4949.setIcon(icon_bacc6e97f75db444ee8b7c489f6c0c17);
+            
+    
+            var marker_bf3e7f00d9465eb0f873146e02215ed9 = L.marker(
+                [43.2955898, 17.0172],
+                {
+}
+            ).addTo(feature_group_sub_group_28e6d5d82f2b5ef69a386ab15e6d4f5d);
+        
+    
+            var icon_4f6400041d801dc672f096ea57a38904 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "anchor",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c58200792e5e228ebbcf1f18374a584b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0782dec8bc3f67de2808aa48dcae1dc4 = $(`<div id="html_0782dec8bc3f67de2808aa48dcae1dc4" style="width: 100.0%; height: 100.0%;"><b>Makarska Marina</b><br>Price: 180€<br><a href='https://www.makarskainfo.com/marina' target='_blank'>Visit Website</a></div>`)[0];
+                popup_c58200792e5e228ebbcf1f18374a584b.setContent(html_0782dec8bc3f67de2808aa48dcae1dc4);
+            
+        
+
+        marker_bf3e7f00d9465eb0f873146e02215ed9.bindPopup(popup_c58200792e5e228ebbcf1f18374a584b)
+        ;
+
+        
+    
+    
+                marker_bf3e7f00d9465eb0f873146e02215ed9.setIcon(icon_4f6400041d801dc672f096ea57a38904);
+            
+    
+            var marker_8d31adbe12fb70e7716934d30beb99f0 = L.marker(
+                [43.533221, 15.9607332],
+                {
+}
+            ).addTo(feature_group_sub_group_28e6d5d82f2b5ef69a386ab15e6d4f5d);
+        
+    
+            var icon_dde3c5798bf29d6dfcfda21330cad24d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "anchor",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a476c9c7ee4095211710d1b47d5df0f0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_678138422d9b9091de6270bddcd82159 = $(`<div id="html_678138422d9b9091de6270bddcd82159" style="width: 100.0%; height: 100.0%;"><b>Marina Frapa</b><br>Price: 248€<br><a href='https://www.marinafrapa.hr/en' target='_blank'>Visit Website</a></div>`)[0];
+                popup_a476c9c7ee4095211710d1b47d5df0f0.setContent(html_678138422d9b9091de6270bddcd82159);
+            
+        
+
+        marker_8d31adbe12fb70e7716934d30beb99f0.bindPopup(popup_a476c9c7ee4095211710d1b47d5df0f0)
+        ;
+
+        
+    
+    
+                marker_8d31adbe12fb70e7716934d30beb99f0.setIcon(icon_dde3c5798bf29d6dfcfda21330cad24d);
+            
+    
+            var marker_f4efd702c159934ec8624d7464c9fb0e = L.marker(
+                [43.3299801, 16.4402481],
+                {
+}
+            ).addTo(feature_group_sub_group_28e6d5d82f2b5ef69a386ab15e6d4f5d);
+        
+    
+            var icon_0aded4ad7ac583bd67111fb94bba1af6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "anchor",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_95dc19036153c32798230b18a3a34128 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e1fdd629aef71c91d9f0fc4e17f7d52a = $(`<div id="html_e1fdd629aef71c91d9f0fc4e17f7d52a" style="width: 100.0%; height: 100.0%;"><b>Marina Vlaska - Milna</b><br>Price: 179€<br><a href='https://marinavlaska.com/en' target='_blank'>Visit Website</a></div>`)[0];
+                popup_95dc19036153c32798230b18a3a34128.setContent(html_e1fdd629aef71c91d9f0fc4e17f7d52a);
+            
+        
+
+        marker_f4efd702c159934ec8624d7464c9fb0e.bindPopup(popup_95dc19036153c32798230b18a3a34128)
+        ;
+
+        
+    
+    
+                marker_f4efd702c159934ec8624d7464c9fb0e.setIcon(icon_0aded4ad7ac583bd67111fb94bba1af6);
+            
+    
+            var marker_1277d64512fb0998e1ab1139d732362d = L.marker(
+                [43.3256421, 16.4481811],
+                {
+}
+            ).addTo(feature_group_sub_group_28e6d5d82f2b5ef69a386ab15e6d4f5d);
+        
+    
+            var icon_f619e5189860b9d087f96c848db665ec = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "anchor",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1105eeae033e33382decd8d427939f97 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c0e58f8d8bcfcd7b3890e35d0e21db4d = $(`<div id="html_c0e58f8d8bcfcd7b3890e35d0e21db4d" style="width: 100.0%; height: 100.0%;"><b>ACI Marina Milna</b><br>Price: 304€<br><a href='https://aci-marinas.com/en/marinas/aci-marina-milna/' target='_blank'>Visit Website</a></div>`)[0];
+                popup_1105eeae033e33382decd8d427939f97.setContent(html_c0e58f8d8bcfcd7b3890e35d0e21db4d);
+            
+        
+
+        marker_1277d64512fb0998e1ab1139d732362d.bindPopup(popup_1105eeae033e33382decd8d427939f97)
+        ;
+
+        
+    
+    
+                marker_1277d64512fb0998e1ab1139d732362d.setIcon(icon_f619e5189860b9d087f96c848db665ec);
+            
+    
+            var marker_f5105365c4de39e74d1995180c4113d5 = L.marker(
+                [43.3276849, 16.4497672],
+                {
+}
+            ).addTo(feature_group_sub_group_28e6d5d82f2b5ef69a386ab15e6d4f5d);
+        
+    
+            var icon_e704c1f82544183b6753213422df8acb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "anchor",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_996503a89ccb0a6e9aeb9d952a6f4e8d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_39152f301b85e0ed9ea8d009bd2b3b40 = $(`<div id="html_39152f301b85e0ed9ea8d009bd2b3b40" style="width: 100.0%; height: 100.0%;"><b>Milna Town Harbour</b><br>Price: 170€<br><a href='https://www.sail-croatia.com/resources/mooring-information/milna' target='_blank'>Visit Website</a></div>`)[0];
+                popup_996503a89ccb0a6e9aeb9d952a6f4e8d.setContent(html_39152f301b85e0ed9ea8d009bd2b3b40);
+            
+        
+
+        marker_f5105365c4de39e74d1995180c4113d5.bindPopup(popup_996503a89ccb0a6e9aeb9d952a6f4e8d)
+        ;
+
+        
+    
+    
+                marker_f5105365c4de39e74d1995180c4113d5.setIcon(icon_e704c1f82544183b6753213422df8acb);
+            
+    
+            var marker_221705746f5f71313db72043bf770c7b = L.marker(
+                [43.2615186, 16.6546076],
+                {
+}
+            ).addTo(feature_group_sub_group_28e6d5d82f2b5ef69a386ab15e6d4f5d);
+        
+    
+            var icon_9be1e8b8dcecc36c26e074476666c0d8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "anchor",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1c8c95b2bb082e1abeb638acb039bb64 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_de4bb18333f7bc41544bf3b0553a20da = $(`<div id="html_de4bb18333f7bc41544bf3b0553a20da" style="width: 100.0%; height: 100.0%;"><b>Bol Town Harbour</b><br>Price: 240€<br><a href='https://www.sail-croatia.com/resources/mooring-information/bol' target='_blank'>Visit Website</a></div>`)[0];
+                popup_1c8c95b2bb082e1abeb638acb039bb64.setContent(html_de4bb18333f7bc41544bf3b0553a20da);
+            
+        
+
+        marker_221705746f5f71313db72043bf770c7b.bindPopup(popup_1c8c95b2bb082e1abeb638acb039bb64)
+        ;
+
+        
+    
+    
+                marker_221705746f5f71313db72043bf770c7b.setIcon(icon_9be1e8b8dcecc36c26e074476666c0d8);
+            
+    
+            var marker_c5edf9a031e439d21f0317e155aa2a08 = L.marker(
+                [43.1734342, 16.443296],
+                {
+}
+            ).addTo(feature_group_sub_group_28e6d5d82f2b5ef69a386ab15e6d4f5d);
+        
+    
+            var icon_b62344e761d776dcbbee3f58abd83658 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "anchor",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_df567f3405508e2caed3746bfecfab0e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_928cf51f3d54126ee9a008c2d9c08b1e = $(`<div id="html_928cf51f3d54126ee9a008c2d9c08b1e" style="width: 100.0%; height: 100.0%;"><b>Hvar Town Harbour</b><br>Price: 360€<br><a href='https://www.sail-croatia.com/resources/mooring-information/hvar' target='_blank'>Visit Website</a></div>`)[0];
+                popup_df567f3405508e2caed3746bfecfab0e.setContent(html_928cf51f3d54126ee9a008c2d9c08b1e);
+            
+        
+
+        marker_c5edf9a031e439d21f0317e155aa2a08.bindPopup(popup_df567f3405508e2caed3746bfecfab0e)
+        ;
+
+        
+    
+    
+                marker_c5edf9a031e439d21f0317e155aa2a08.setIcon(icon_b62344e761d776dcbbee3f58abd83658);
+            
+    
+            var marker_931933ef94cfa8abab5af6b7abdc33e4 = L.marker(
+                [43.184432, 16.5941288],
+                {
+}
+            ).addTo(feature_group_sub_group_28e6d5d82f2b5ef69a386ab15e6d4f5d);
+        
+    
+            var icon_23de17e85a2f8649b68943258eea641a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "anchor",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_08d20f988e7bed26b26ab4d30921ef01 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b07ca3cf89ae7ea4fca5b209320be294 = $(`<div id="html_b07ca3cf89ae7ea4fca5b209320be294" style="width: 100.0%; height: 100.0%;"><b>Stari Grad</b><br>Price: 200€<br><a href='https://www.sail-croatia.com/resources/mooring-information/stari-grad' target='_blank'>Visit Website</a></div>`)[0];
+                popup_08d20f988e7bed26b26ab4d30921ef01.setContent(html_b07ca3cf89ae7ea4fca5b209320be294);
+            
+        
+
+        marker_931933ef94cfa8abab5af6b7abdc33e4.bindPopup(popup_08d20f988e7bed26b26ab4d30921ef01)
+        ;
+
+        
+    
+    
+                marker_931933ef94cfa8abab5af6b7abdc33e4.setIcon(icon_23de17e85a2f8649b68943258eea641a);
+            
+    
+            var marker_3e4be06319606bf43a37214818887c0a = L.marker(
+                [42.7346481, 16.8871447],
+                {
+}
+            ).addTo(feature_group_sub_group_28e6d5d82f2b5ef69a386ab15e6d4f5d);
+        
+    
+            var icon_08f127eeb1225359efa72a01c4921e2f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "anchor",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9706f27dfc6d4226b664d7fdde360707 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_673f16697f70b8c4a4c818168e165ae7 = $(`<div id="html_673f16697f70b8c4a4c818168e165ae7" style="width: 100.0%; height: 100.0%;"><b>Lastovo Marina</b><br>Price: 93-130€<br><a href='https://lastovomarina.hr/' target='_blank'>Visit Website</a></div>`)[0];
+                popup_9706f27dfc6d4226b664d7fdde360707.setContent(html_673f16697f70b8c4a4c818168e165ae7);
+            
+        
+
+        marker_3e4be06319606bf43a37214818887c0a.bindPopup(popup_9706f27dfc6d4226b664d7fdde360707)
+        ;
+
+        
+    
+    
+                marker_3e4be06319606bf43a37214818887c0a.setIcon(icon_08f127eeb1225359efa72a01c4921e2f);
+            
+    
+            var marker_21a703701f9aa521f5aa97e1f8315b75 = L.marker(
+                [43.5720346, 15.9417063],
+                {
+}
+            ).addTo(feature_group_sub_group_28e6d5d82f2b5ef69a386ab15e6d4f5d);
+        
+    
+            var icon_ba7e521f76bb11afa9565b26e393ed8c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "anchor",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b16529e4f4c488163875ca3078d798f4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_df6a36d149fcd74cf906f32c9e0c4f4c = $(`<div id="html_df6a36d149fcd74cf906f32c9e0c4f4c" style="width: 100.0%; height: 100.0%;"><b>Rogoznica Marina</b><br>Price: 180€<br><a href='https://www.marinafrapa.hr/en' target='_blank'>Visit Website</a></div>`)[0];
+                popup_b16529e4f4c488163875ca3078d798f4.setContent(html_df6a36d149fcd74cf906f32c9e0c4f4c);
+            
+        
+
+        marker_21a703701f9aa521f5aa97e1f8315b75.bindPopup(popup_b16529e4f4c488163875ca3078d798f4)
+        ;
+
+        
+    
+    
+                marker_21a703701f9aa521f5aa97e1f8315b75.setIcon(icon_ba7e521f76bb11afa9565b26e393ed8c);
+            
+    
+            var marker_8788a545c0b59929eac4e8e00e9e98eb = L.marker(
+                [43.5151003, 16.2493369],
+                {
+}
+            ).addTo(feature_group_sub_group_28e6d5d82f2b5ef69a386ab15e6d4f5d);
+        
+    
+            var icon_7b75366f68e460ea13460d43d8de3395 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "anchor",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f0214692acbe748b8b3d5171d0c830ab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_96064e9cc35c29cde4d2f8f01a28653b = $(`<div id="html_96064e9cc35c29cde4d2f8f01a28653b" style="width: 100.0%; height: 100.0%;"><b>Trogir Harbour</b><br>Price: 201€<br><a href='https://www.sail-croatia.com/resources/mooring-information/trogir' target='_blank'>Visit Website</a></div>`)[0];
+                popup_f0214692acbe748b8b3d5171d0c830ab.setContent(html_96064e9cc35c29cde4d2f8f01a28653b);
+            
+        
+
+        marker_8788a545c0b59929eac4e8e00e9e98eb.bindPopup(popup_f0214692acbe748b8b3d5171d0c830ab)
+        ;
+
+        
+    
+    
+                marker_8788a545c0b59929eac4e8e00e9e98eb.setIcon(icon_7b75366f68e460ea13460d43d8de3395);
+            
+    
+            var marker_01d5172346471fd6a2b7a0bb333865be = L.marker(
+                [43.7588597, 15.7800732],
+                {
+}
+            ).addTo(feature_group_sub_group_28e6d5d82f2b5ef69a386ab15e6d4f5d);
+        
+    
+            var icon_b25f23242beac0c81315887fb4bb9878 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "anchor",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dc6c85dc89be509f5b3985233d427ecc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cfb85849afdacda2f2cbb0a6c3b97c7b = $(`<div id="html_cfb85849afdacda2f2cbb0a6c3b97c7b" style="width: 100.0%; height: 100.0%;"><b>Murter Marina</b><br>Price: 201€<br><a href='https://marina.hr/en/marina-hramina' target='_blank'>Visit Website</a></div>`)[0];
+                popup_dc6c85dc89be509f5b3985233d427ecc.setContent(html_cfb85849afdacda2f2cbb0a6c3b97c7b);
+            
+        
+
+        marker_01d5172346471fd6a2b7a0bb333865be.bindPopup(popup_dc6c85dc89be509f5b3985233d427ecc)
+        ;
+
+        
+    
+    
+                marker_01d5172346471fd6a2b7a0bb333865be.setIcon(icon_b25f23242beac0c81315887fb4bb9878);
+            
+    
+            feature_group_sub_group_28e6d5d82f2b5ef69a386ab15e6d4f5d.addTo(map_b2c63cee667946b7840f7f27136efe83);
+        
+    
+            var feature_group_sub_group_f66f27a7f29ff5a7496655bbdd04a936 = L.featureGroup.subGroup(
+                marker_cluster_15e9fbe1ab2211d7725bb485bfb48784
+            );
+        
+    
+            var marker_1735e55d9497939c64245d6daf55c8fc = L.marker(
+                [43.6855, 15.725],
+                {
+}
+            ).addTo(feature_group_sub_group_f66f27a7f29ff5a7496655bbdd04a936);
+        
+    
+            var icon_2def810633595aa6f208f517d7042c5a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "pink",
+  "iconColor": "white",
+  "icon": "anchor",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_778c58bb39855240c71e2e1202dfedf8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a88c2fc752ffe169a22eb71e2d770c21 = $(`<div id="html_a88c2fc752ffe169a22eb71e2d770c21" style="width: 100.0%; height: 100.0%;"><b>Kaprjie Sud</b><br>Price: 5€/m<br><a href='https://www.navily.com/mouillage/kaprjie-sud/30141#reviews' target='_blank'>Visit Website</a></div>`)[0];
+                popup_778c58bb39855240c71e2e1202dfedf8.setContent(html_a88c2fc752ffe169a22eb71e2d770c21);
+            
+        
+
+        marker_1735e55d9497939c64245d6daf55c8fc.bindPopup(popup_778c58bb39855240c71e2e1202dfedf8)
+        ;
+
+        
+    
+    
+                marker_1735e55d9497939c64245d6daf55c8fc.setIcon(icon_2def810633595aa6f208f517d7042c5a);
+            
+    
+            var marker_ac2d13d2c05fa556c8bc5ff2603dda69 = L.marker(
+                [43.6355, 15.6842],
+                {
+}
+            ).addTo(feature_group_sub_group_f66f27a7f29ff5a7496655bbdd04a936);
+        
+    
+            var icon_4bbcef1e234da0ee3145813abdc9a947 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "pink",
+  "iconColor": "white",
+  "icon": "anchor",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d899da1d04a45254e90f301d73987912 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_35628a6ee5b78dbc84c3378a2ccecf45 = $(`<div id="html_35628a6ee5b78dbc84c3378a2ccecf45" style="width: 100.0%; height: 100.0%;"><b>Uvala Stupica Vela - Žirje</b><br>Price: ~45€/night<br><a href='https://www.navily.com/mouillage/uvala-stupica-vela-zirje/19185#reviews' target='_blank'>Visit Website</a></div>`)[0];
+                popup_d899da1d04a45254e90f301d73987912.setContent(html_35628a6ee5b78dbc84c3378a2ccecf45);
+            
+        
+
+        marker_ac2d13d2c05fa556c8bc5ff2603dda69.bindPopup(popup_d899da1d04a45254e90f301d73987912)
+        ;
+
+        
+    
+    
+                marker_ac2d13d2c05fa556c8bc5ff2603dda69.setIcon(icon_4bbcef1e234da0ee3145813abdc9a947);
+            
+    
+            var marker_34bfd8096a9d0bc729775a587254d3dc = L.marker(
+                [43.7155, 15.7713],
+                {
+}
+            ).addTo(feature_group_sub_group_f66f27a7f29ff5a7496655bbdd04a936);
+        
+    
+            var icon_9a626a3e6c8909fd37e7c06cf04f5eae = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "pink",
+  "iconColor": "white",
+  "icon": "anchor",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a968eea57ed44cdcc496709e091b1999 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0445ab222b0d1f2edbbb32188e8aea97 = $(`<div id="html_0445ab222b0d1f2edbbb32188e8aea97" style="width: 100.0%; height: 100.0%;"><b>Tijascica</b><br>Price: 3€/m<br><a href='https://www.navily.com/mouillage/tijascica/19559#reviews' target='_blank'>Visit Website</a></div>`)[0];
+                popup_a968eea57ed44cdcc496709e091b1999.setContent(html_0445ab222b0d1f2edbbb32188e8aea97);
+            
+        
+
+        marker_34bfd8096a9d0bc729775a587254d3dc.bindPopup(popup_a968eea57ed44cdcc496709e091b1999)
+        ;
+
+        
+    
+    
+                marker_34bfd8096a9d0bc729775a587254d3dc.setIcon(icon_9a626a3e6c8909fd37e7c06cf04f5eae);
+            
+    
+            feature_group_sub_group_f66f27a7f29ff5a7496655bbdd04a936.addTo(map_b2c63cee667946b7840f7f27136efe83);
+        
+    
+            var feature_group_sub_group_a32abb4ad04efcc09a74421345d7cfba = L.featureGroup.subGroup(
+                marker_cluster_15e9fbe1ab2211d7725bb485bfb48784
+            );
+        
+    
+            var marker_959cf095dbad031c7fc7e9c11c9a63bf = L.marker(
+                [43.2612041, 16.6546118],
+                {
+}
+            ).addTo(feature_group_sub_group_a32abb4ad04efcc09a74421345d7cfba);
+        
+    
+            var icon_1ff679d4c315b4203bd83679f18d6cf7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "wine-glass",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_68d867a4989b46f106f61f5496fe6d8e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1d117748589cb636cb82b4068e382877 = $(`<div id="html_1d117748589cb636cb82b4068e382877" style="width: 100.0%; height: 100.0%;"><b>Stina Winery</b><br><a href='https://stina-vino.hr/en/' target='_blank'>Visit Website</a></div>`)[0];
+                popup_68d867a4989b46f106f61f5496fe6d8e.setContent(html_1d117748589cb636cb82b4068e382877);
+            
+        
+
+        marker_959cf095dbad031c7fc7e9c11c9a63bf.bindPopup(popup_68d867a4989b46f106f61f5496fe6d8e)
+        ;
+
+        
+    
+    
+                marker_959cf095dbad031c7fc7e9c11c9a63bf.setIcon(icon_1ff679d4c315b4203bd83679f18d6cf7);
+            
+    
+            var marker_fd7d860339b18104cc6792e653eeca49 = L.marker(
+                [43.3767186, 16.6680829],
+                {
+}
+            ).addTo(feature_group_sub_group_a32abb4ad04efcc09a74421345d7cfba);
+        
+    
+            var icon_955453a95b53236df78b1129a8384da5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "wine-glass",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2d113b576464ad035696ceb5c9bbcfef = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d9bca69bc3f0b5c1eb6e3e51872cbe50 = $(`<div id="html_d9bca69bc3f0b5c1eb6e3e51872cbe50" style="width: 100.0%; height: 100.0%;"><b>Wine Tasting Hrapoćuša Brač</b><br><a href='https://www.agroturizam-hrapocusa.com/index(eng).html' target='_blank'>Visit Website</a></div>`)[0];
+                popup_2d113b576464ad035696ceb5c9bbcfef.setContent(html_d9bca69bc3f0b5c1eb6e3e51872cbe50);
+            
+        
+
+        marker_fd7d860339b18104cc6792e653eeca49.bindPopup(popup_2d113b576464ad035696ceb5c9bbcfef)
+        ;
+
+        
+    
+    
+                marker_fd7d860339b18104cc6792e653eeca49.setIcon(icon_955453a95b53236df78b1129a8384da5);
+            
+    
+            feature_group_sub_group_a32abb4ad04efcc09a74421345d7cfba.addTo(map_b2c63cee667946b7840f7f27136efe83);
+        
+    
+            var feature_group_sub_group_8b8f083dc6258605c841bb84b5bf5d74 = L.featureGroup.subGroup(
+                marker_cluster_15e9fbe1ab2211d7725bb485bfb48784
+            );
+        
+    
+            var marker_d1c4a176af08e60c547ae24005f15649 = L.marker(
+                [43.2576568, 16.6346002],
+                {
+}
+            ).addTo(feature_group_sub_group_8b8f083dc6258605c841bb84b5bf5d74);
+        
+    
+            var icon_2de921c0e1cc82a1b205f53540dbdb9f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "water",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6d95e2ac05c98033bc397c650578bd19 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_53fd385d7daf0e32fd57a2f500deae20 = $(`<div id="html_53fd385d7daf0e32fd57a2f500deae20" style="width: 100.0%; height: 100.0%;"><b>Zlatni Rat Beach</b><br><a href='https://www.zlatniratbol.com/en/' target='_blank'>Visit Website</a></div>`)[0];
+                popup_6d95e2ac05c98033bc397c650578bd19.setContent(html_53fd385d7daf0e32fd57a2f500deae20);
+            
+        
+
+        marker_d1c4a176af08e60c547ae24005f15649.bindPopup(popup_6d95e2ac05c98033bc397c650578bd19)
+        ;
+
+        
+    
+    
+                marker_d1c4a176af08e60c547ae24005f15649.setIcon(icon_2de921c0e1cc82a1b205f53540dbdb9f);
+            
+    
+            var marker_bc403225ec60191872dff87f35a994b5 = L.marker(
+                [43.266757, 16.5942907],
+                {
+}
+            ).addTo(feature_group_sub_group_8b8f083dc6258605c841bb84b5bf5d74);
+        
+    
+            var icon_921e65bf6869741c2a0264498a8fa3ea = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "water",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c26d8294599c6403d2b3704ea0f69431 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5fad287f9870a994eaaa474f227950e8 = $(`<div id="html_5fad287f9870a994eaaa474f227950e8" style="width: 100.0%; height: 100.0%;"><b>Murvica Beach</b></div>`)[0];
+                popup_c26d8294599c6403d2b3704ea0f69431.setContent(html_5fad287f9870a994eaaa474f227950e8);
+            
+        
+
+        marker_bc403225ec60191872dff87f35a994b5.bindPopup(popup_c26d8294599c6403d2b3704ea0f69431)
+        ;
+
+        
+    
+    
+                marker_bc403225ec60191872dff87f35a994b5.setIcon(icon_921e65bf6869741c2a0264498a8fa3ea);
+            
+    
+            var marker_dfe102352a80737d09a9fe2544077565 = L.marker(
+                [43.2678897, 16.8003045],
+                {
+}
+            ).addTo(feature_group_sub_group_8b8f083dc6258605c841bb84b5bf5d74);
+        
+    
+            var icon_1601e0bdc3aa1658f8e26bebf12e5e47 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "water",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_25f8af7b00295e6a5d5b09907b599daf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bb73d409c402317e38f07e45331cebbe = $(`<div id="html_bb73d409c402317e38f07e45331cebbe" style="width: 100.0%; height: 100.0%;"><b>Spilice Beach</b></div>`)[0];
+                popup_25f8af7b00295e6a5d5b09907b599daf.setContent(html_bb73d409c402317e38f07e45331cebbe);
+            
+        
+
+        marker_dfe102352a80737d09a9fe2544077565.bindPopup(popup_25f8af7b00295e6a5d5b09907b599daf)
+        ;
+
+        
+    
+    
+                marker_dfe102352a80737d09a9fe2544077565.setIcon(icon_1601e0bdc3aa1658f8e26bebf12e5e47);
+            
+    
+            feature_group_sub_group_8b8f083dc6258605c841bb84b5bf5d74.addTo(map_b2c63cee667946b7840f7f27136efe83);
+        
+    
+            var feature_group_sub_group_352717f85cc29fe492ff7adb1efa1e2e = L.featureGroup.subGroup(
+                marker_cluster_15e9fbe1ab2211d7725bb485bfb48784
+            );
+        
+    
+            var marker_e90ebe1b33469d6c0722f23a92516060 = L.marker(
+                [43.2801273, 16.6269764],
+                {
+}
+            ).addTo(feature_group_sub_group_352717f85cc29fe492ff7adb1efa1e2e);
+        
+    
+            var icon_e1923d7bf35b7422286e5d3a5b118997 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "mountain",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_227e7e87fc94dfd4f0d04e37142599b6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0fac5a276ee95d02787c19c2a568a10a = $(`<div id="html_0fac5a276ee95d02787c19c2a568a10a" style="width: 100.0%; height: 100.0%;"><b>Vidova Gora</b><br><a href='https://www.alltrails.com/trail/croatia/split-dalmatia/bol-vidova-gora' target='_blank'>Visit Website</a></div>`)[0];
+                popup_227e7e87fc94dfd4f0d04e37142599b6.setContent(html_0fac5a276ee95d02787c19c2a568a10a);
+            
+        
+
+        marker_e90ebe1b33469d6c0722f23a92516060.bindPopup(popup_227e7e87fc94dfd4f0d04e37142599b6)
+        ;
+
+        
+    
+    
+                marker_e90ebe1b33469d6c0722f23a92516060.setIcon(icon_e1923d7bf35b7422286e5d3a5b118997);
+            
+    
+            feature_group_sub_group_352717f85cc29fe492ff7adb1efa1e2e.addTo(map_b2c63cee667946b7840f7f27136efe83);
+        
+    
+            var feature_group_sub_group_d68b6d6519f52e182ef7439bcc96edcf = L.featureGroup.subGroup(
+                marker_cluster_15e9fbe1ab2211d7725bb485bfb48784
+            );
+        
+    
+            var marker_ae3ca8eabc16b43d9be17b7714f488f4 = L.marker(
+                [43.2695286, 16.6005845],
+                {
+}
+            ).addTo(feature_group_sub_group_d68b6d6519f52e182ef7439bcc96edcf);
+        
+    
+            var icon_4aba8b667e1a158fac8de49562b79885 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "mountain",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ed7facf4394db5d79832071e60d24191 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c2ec7c7c860acc6e6d8a707e6ba3b85 = $(`<div id="html_5c2ec7c7c860acc6e6d8a707e6ba3b85" style="width: 100.0%; height: 100.0%;"><b>Drakonjina špilja</b></div>`)[0];
+                popup_ed7facf4394db5d79832071e60d24191.setContent(html_5c2ec7c7c860acc6e6d8a707e6ba3b85);
+            
+        
+
+        marker_ae3ca8eabc16b43d9be17b7714f488f4.bindPopup(popup_ed7facf4394db5d79832071e60d24191)
+        ;
+
+        
+    
+    
+                marker_ae3ca8eabc16b43d9be17b7714f488f4.setIcon(icon_4aba8b667e1a158fac8de49562b79885);
+            
+    
+            feature_group_sub_group_d68b6d6519f52e182ef7439bcc96edcf.addTo(map_b2c63cee667946b7840f7f27136efe83);
+        
+    
+            var layer_control_9702839abdf5c14ce424654c6da88512_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_0a16394040cd45de2413abcd47ae4aaf,
+                },
+                overlays :  {
+                    "macro_element_15e9fbe1ab2211d7725bb485bfb48784" : marker_cluster_15e9fbe1ab2211d7725bb485bfb48784,
+                    "Marinas" : feature_group_sub_group_28e6d5d82f2b5ef69a386ab15e6d4f5d,
+                    "Mooring Buoys" : feature_group_sub_group_f66f27a7f29ff5a7496655bbdd04a936,
+                    "Wineries" : feature_group_sub_group_a32abb4ad04efcc09a74421345d7cfba,
+                    "Beaches" : feature_group_sub_group_8b8f083dc6258605c841bb84b5bf5d74,
+                    "Hikes" : feature_group_sub_group_352717f85cc29fe492ff7adb1efa1e2e,
+                    "Caves" : feature_group_sub_group_d68b6d6519f52e182ef7439bcc96edcf,
+                },
+            };
+            let layer_control_9702839abdf5c14ce424654c6da88512 = L.control.layers(
+                layer_control_9702839abdf5c14ce424654c6da88512_layers.base_layers,
+                layer_control_9702839abdf5c14ce424654c6da88512_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_b2c63cee667946b7840f7f27136efe83);
+
+        
+</script>
+</html>
